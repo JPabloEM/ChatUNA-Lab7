@@ -27,7 +27,7 @@ const BASE_URL = `http://localhost:${port}`;
 
 // Configuración de Auth0/Okta
 const config = {
-  authRequired: false,  // No requiere autenticación en todas las rutas
+  authRequired: true,  // No requiere autenticación en todas las rutas
   auth0Logout: true,
   secret: SECRET,
   baseURL: BASE_URL,
