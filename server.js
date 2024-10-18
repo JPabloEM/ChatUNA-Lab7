@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 });
 
 // Ruta del dashboard protegida
-app.get('/dashboard', requiresAuth(), (req, res) => {
+app.get('/dashboard', (req, res) => {
   res.send(`
     <h1>Bienvenid@, ${req.oidc.user.name}!</h1>
     <p>Su email es: ${req.oidc.user.email}</p>
