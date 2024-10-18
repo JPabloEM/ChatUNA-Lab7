@@ -33,9 +33,6 @@ const config = {
   baseURL: BASE_URL,
   clientID: OKTA_CLIENT_ID,
   issuerBaseURL: OKTA_ISSUER_URI,
-  routes: {
-    callback: '/callback',  // Ruta de callback por defecto
-  },
 };
 
 // Middleware de autenticación
