@@ -27,12 +27,15 @@ const BASE_URL = process.env.BASE_URL || `http://localhost:${port}`;
 
 // Configuración de Auth0/Okta
 const config = {
-  authRequired: true,  // No requiere autenticación en todas las rutas
+  authRequired: false,  // No requiere autenticación en todas las rutas
   auth0Logout: true,
   secret: SECRET,
   baseURL: BASE_URL,
   clientID: OKTA_CLIENT_ID,
   issuerBaseURL: OKTA_ISSUER_URI,
+  routes: {
+    callback: '/callback',  // Ruta de callback por defecto
+  },
 };
 
 // Middleware de autenticación
